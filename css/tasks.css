@@ -1,0 +1,372 @@
+body
+{
+    background-image:url("../img/bg2.jpg");
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    padding:0;
+	align-items: center;
+	justify-content: center;
+background-repeat: no-repeat;
+font-family: 'Spectral SC', serif;	
+
+}
+
+#blurbg
+{
+	background-image:url("../img/bg2.jpg");
+	background-attachment: fixed;
+	width: 100%;
+	position: absolute;
+	height:100%;
+	filter: blur(15px);
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;	
+	
+}
+
+#blurbg.active
+{
+		background-image:url("../img/bg2.jpg");
+		visibility: visible;
+		opacity: 1;
+		z-index: 4;
+	
+	
+	
+}
+
+.searchbox {
+    
+    display: inline-flex;
+	position: absolute;
+	flex-direction: column;
+    right:25px;
+    top: 25px;  
+	z-index: 3;	
+}
+
+.searchbox input   {
+    
+    height: 32px;    
+	width: 250px;
+    border-radius: 4px;
+    border: 2px solid black;
+    background-color: #fff;
+    outline:none; 
+    font-family: 'Spectral SC', serif;
+    font-size: 20px;
+        
+}
+
+.searchbox h2 {
+	
+	  display: inline;
+    position: relative;
+    top: 30%;  
+	
+}
+
+
+h1 {
+	
+	font-family: 'Spectral SC', serif;
+	font-size: 46px;
+	font-stretch: ultra-expanded;
+	
+}
+
+h2  {
+    
+    font-family: 'Spectral SC', serif;    
+    
+}
+
+
+#alltasks	{
+	
+align-items: center;
+justify-content: center;
+font-family: 'Spectral SC', serif;
+text-align: center;
+display: inline-flex;
+position: absolute;
+top: 5vh;
+left: 40vw;
+z-index: 3;
+  
+}
+
+#alltasks.passive
+
+{
+	
+height: 20px;
+visibility: hidden;
+overflow: hidden;
+opacity: 0;
+  
+}
+
+.taskboard	{
+	
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 60vw;
+	height: 80vh;
+	position: absolute;
+	top: 15vh;
+	margin-left: 10vh;
+	border: 2px solid black;
+	border-collapse: collapse;
+		
+}
+
+#todo, #done, #inprogress	{
+	
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	width: 19vw;
+	height: 75vh;
+	border: 2px solid black;
+	border-collapse: collapse;	
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.task {
+	
+	width: 525px;
+	height: 200px;
+	border: 1px solid black;
+	margin-bottom: 5px;
+	background-color: aliceblue;
+	text-align: left;
+	padding-left: 10px;
+	
+}		
+
+#taskcard
+
+{
+	
+	width: 325px;
+	height: auto;
+	border: 1px solid black;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	background-color: aliceblue;
+	
+}	
+
+#editdelete
+
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+
+.description	{
+	
+	width: 30%;
+	font-weight:bolder;
+	font-size: 24px;
+	font-family: 'Spectral SC', serif;
+
+	}
+
+
+.buttons	{
+	
+	width: 10%;	
+	display: flex;
+	flex-direction:column;
+        color: green;
+	
+}
+
+#b2proj
+{
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 200px;
+	height:100px;
+	text-decoration: none;
+	box-shadow: 0 5px 15px rgba(0,0,0, .5);
+	background-color: black;
+	color: #F5FFFA;
+	border-radius: 5px;
+	position: fixed;
+	text-align: center;
+	font-size: 32px;
+	left: 2vw;
+	top: 5vh;
+
+	
+}
+
+a
+{
+		text-decoration: none;
+		color: black;
+
+	
+}
+
+.newtask {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 240px;
+	height:100px;
+	text-decoration: none;
+	box-shadow: 0 5px 15px rgba(0,0,0, .5);
+	background-color: black;
+	color: #F5FFFA;
+	border-radius: 5px;
+	position: fixed;
+	top: 85vh;
+	left: 2vw;
+	text-align: center;
+		
+}
+
+#newtaskbox
+{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	height: 800px;
+	font-family: 'Spectral SC', serif;
+	font-size: 22px;
+	font-weight: 400;
+	font-stretch: ultra-expanded;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 5px 30px rgba(0,0,0,.30);
+	visibility: hidden;
+	border-radius: 5px;
+	opacity: 0;
+	right: 17vw;
+	top: 50vh;
+	transition: 0.25s;
+			
+}
+
+#newtaskbox.active
+{
+	visibility: visible;
+	opacity: 1;
+	filter: none;
+	z-index: 6;	
+	transition: 1.5s;
+}
+
+#taskname input
+{
+	width: 80%;
+	margin-top: 20px;
+
+}
+
+
+#projdes label
+{
+
+	width: 80%;
+	
+
+}
+
+#projdes textarea
+{
+
+	width: 80%;
+	height: 300px;
+	font-family: 'Spectral SC', serif;
+	font-size: 19px;
+	border: 1px;
+    border-radius: 3px;
+	margin-top: 15px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+
+}
+
+input	
+{
+	width:75%;
+	height: 36px;
+	font-family: 'Spectral SC', serif;
+	font-size: 19px;
+	border: 1px;
+    border-radius: 3px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+}
+
+#addtask
+{
+	
+	width: 320px;
+	height:65px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;	
+
+}
+
+#prio
+{
+	margin-left: 58px;
+	color: black;
+	font-weight:bolder;
+	font-size: 24px;
+}
+
+#priority
+{
+	margin-left: 175px;
+	font-family: 'Spectral SC', serif;
+	font-size: 18px;
+}
+
+.back2work {
+	
+	
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 120px;
+	height: 75px;
+	text-decoration: none;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-size: 16px;
+	justify-content: center;
+	align-items: center;	
+	bottom: 3vh;
+	left: 2vw;
+	
+	
+}
+
+

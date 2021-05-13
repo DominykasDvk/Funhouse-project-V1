@@ -1,0 +1,1759 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body
+{
+
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    padding:0;
+	align-items: center;
+	justify-content: center;
+	animation-name: fade;
+	animation-duration: 0.5s;
+	overflow-x: hidden;
+	box-sizing: border-box;
+	background-image:url("../img/bg2.jpg");
+	background-attachment: fixed;
+	
+}
+
+#fullbg 
+{
+	background-image:url("../img/bg2.jpg");
+	/* background-repeat: no-repeat;	 */
+	/* background-attachment: fixed; */
+	/* height: 100%; */
+	}
+
+#blurbg
+{
+	background-image:url("../img/bg2.jpg");
+	background-attachment: fixed;
+	width: 100%;
+	position: absolute;
+	height:100%;
+	width: 100%;
+	filter: blur(15px);
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
+	z-index: 4;
+	
+}
+
+#blurbg.active
+{
+		background-image:url("../img/bg2.jpg");
+		visibility: visible;
+		opacity: 1;
+	
+	
+	
+}
+
+#theuser	{
+	
+	display: inline-block;
+	height: 100px;
+	width: 200px;
+	position: absolute;
+	border-radius: 15px;
+	left: 50px;
+	top: 50px;
+	border: 1px solid black;
+	box-shadow: 0 5px 15px rgba(0,0,0, .5);
+	background: url("../img/bg3.jpg");
+	background-position: top center;
+	background-attachment: fixed;
+	border-collapse: collapse;
+	position: fixed;
+	z-index: 3;
+					
+}
+
+#theuser:before	{
+	
+	content: '';
+	display: inline-block;
+	height: 100px;
+	width: 200px;
+	position: absolute;
+	border-radius: 15px;
+	background: url("../img/bg3.jpg");
+	background-attachment: fixed;
+	filter: blur(2px) grayscale(0.9);	
+			
+}
+ .username	{
+	
+	
+	margin-bottom: 6px;
+	color: white;	
+	position: relative;
+	text-align: left;
+	left: 15px;
+	color: #F5FFFA;
+	}
+	
+	#loginmessage	{
+		
+		left: 30px;
+		color: white;
+		position: relative;
+		margin-top: 1px;
+		margin-bottom: 6px;
+		color: #F5FFFA;
+		font-size: 12px;
+				
+	}
+
+.logout   {    
+    text-decoration: none;
+    color: #F5FFFA;
+    font-size: 18px;
+    font-weight: bolder; 
+    font-family: 'Spectral SC', serif;
+	position: relative;
+	float: right;
+	right: 10px;
+	z-index: 6;
+	
+	
+}
+
+.searchbox {
+    
+    display: flex;
+	flex-direction: row;
+    right: 2%;
+    top: 5vh;    
+	position: fixed;
+	z-index: 3;
+}
+
+.searchbox input   {
+    
+    height: 32px;  
+	width: 250px;	
+    border-radius: 4px;
+    border: 2px solid black;
+    background-color: #fff;
+    outline:none; 
+    font-family: 'Spectral SC', serif;
+    font-size: 20px;
+	margin-left: 10px;
+        
+}
+
+
+h1 {
+	
+	font-family: 'Spectral SC', serif;
+	font-size: 42px;
+	font-stretch: ultra-expanded;
+	
+}
+
+h2  {
+    
+    font-family: 'Spectral SC', serif;    
+    
+}
+
+/*START OF ALL TABLE ELEMENTS*/
+
+
+#projheader /*FIXED TABLE HEADER CONTAINER*/
+{
+  padding: 10px 16px;
+  background-image: url(../img/bg2.jpg);
+  text-align: center;
+  height: 232px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: 0px 0px 40px 20px #DBA632; */
+}
+
+
+#tableheader
+
+{	
+	font-weight:bolder;
+	font-size: 28px;
+	width: 1400px;
+	font-family: 'Spectral SC', serif;
+	line-height: 250%;
+	box-sizing: border-box;
+
+}
+		
+#subtable
+{
+	width: 80%;
+
+			
+}	
+
+
+
+.sticky /*CLASS FOR JS ADDITION*/
+{
+	
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + #allprojects {
+  padding-top: 102px;
+}
+
+
+
+#allprojects /*MAIN TABLE CONTAINER FOR PROJECTS*/
+{
+
+margin: 0 auto;
+width: 1400px; 
+height: auto;
+align-items: center;
+justify-content: center;
+font-family: 'Spectral SC', serif;
+text-align: center;
+display: block;
+position: relative;
+box-sizing: border-box;
+  
+}
+
+#allprojects.passive	{
+	
+height: 20px;
+visibility: hidden;
+overflow: hidden;
+opacity: 0;
+  
+}
+
+table
+{
+	
+margin: 0 auto;
+text-align: center;
+width: 80%;
+font-weight:bolder;
+line-height: 200%;
+border-collapse:collapse;
+box-sizing: border-box;	
+position: relative;
+}
+
+/*THESE ITEMS HAVE SAME CLASS AND ID NAMES FOR BOTH TABLE HEADERS*/
+
+.theder
+ {
+	
+	
+		font-weight:bolder;
+		font-size: 32px;
+		font-family: 'Spectral SC', serif;
+		line-height: 250%;
+		border-bottom: 5px solid black;
+
+}
+
+
+		
+.projectrow 
+{
+	width: 25%;
+	font-weight:bolder;
+	text-align: left;
+	font-size: 32px;
+
+}
+
+.description
+{
+	
+	width: 30%;
+	font-weight:bolder;
+	font-size: 32px;
+	font-family: 'Spectral SC', serif;
+	padding-right: 60px;
+
+}
+
+.status 
+{
+	width: 20%;
+	font-weight:bolder;
+	PADDING-LEFT: 20px;
+	font-size: 36px;
+
+}
+		
+
+
+#alltasks
+{
+	font-size: 24px;
+	width: 10%;
+	line-height:200%;
+}
+
+#remtasks
+{
+	font-size: 24px;
+	width: 10%;
+	line-height:200%;
+	padding-right: 10px;
+
+}
+
+th #write, #delete
+{
+		width: 5%;
+}
+
+
+td:nth-child(1)/*COLUMN FOR PROJECT NAMES*/
+{
+
+font-family: 'Zilla Slab Highlight', cursive;
+font-size: 26px;
+font-weight: 200;
+line-height: 250%;
+text-align: left;
+width: 25%;
+font-stretch: expanded;
+color: #1a1110;
+}
+
+td:nth-child(2)
+{
+
+font-family: 'Spectral SC', serif;
+font-size: 16px;
+line-height: 150%;
+padding-right: 6px;
+padding-left: 10px;
+text-align: left;
+width: 30%;
+
+}
+
+td:nth-child(3)
+{
+
+width:20%;
+
+}
+
+td:nth-child(4)
+{
+
+width:10%;
+
+}
+
+td:nth-child(5)
+{
+
+width:10%;
+
+}
+
+td:nth-child(6)
+{
+
+width:7.5%;
+
+}
+
+td:nth-child(7)
+{
+
+width:7.5%;
+
+}
+
+
+.icspace
+{	width: 50px;
+	
+}
+
+/*END OF TABLE ELEMENTS*/
+
+
+.newproj {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 240px;
+	height:100px;
+	text-decoration: none;
+	box-shadow: 0 5px 15px rgba(0,0,0, .5);
+	background-color: black;
+	color: #F5FFFA;
+	border-radius: 5px;
+	position: fixed;
+	top: 85vh;
+	left: 2vw;
+		
+}
+
+
+a   {
+    
+    text-decoration: none;
+    font-weight: bold;
+	color: black;
+ }
+ 
+ /* THE POP UP WINDOW CSS*/
+ 
+ 
+* {
+  box-sizing: border-box;
+}
+
+
+#newprojbox
+{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	height: 800px;
+	font-family: 'Spectral SC', serif;
+	font-size: 22px;
+	font-weight: 400;
+	font-stretch: ultra-expanded;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 5px 30px rgba(0,0,0,.30);
+	visibility: hidden;
+	border-radius: 5px;
+	opacity: 0;
+	right: 17vw;
+	top: 50vh;
+	transition: 0.25s;
+			
+}
+
+#newprojbox.active
+{
+	visibility: visible;
+	opacity: 1;
+	filter: none;
+	z-index: 5;	
+	transition: 1.5s;
+}
+
+
+
+#projdes label
+{
+
+	width: 80%;
+	
+
+}
+
+#projdes textarea
+{
+
+	width: 80%;
+	height: 300px;
+	font-family: 'Spectral SC', serif;
+	font-size: 19px;
+	border: 1px;
+    border-radius: 3px;
+	margin-top: 15px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+
+}
+
+input	
+{
+	width:75%;
+	height: 36px;
+	font-family: 'Spectral SC', serif;
+	font-size: 19px;
+	border: 1px;
+    border-radius: 3px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+}
+
+#init
+{
+	
+	width: 320px;
+	height:65px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;	
+
+}
+.back2work {
+	
+	
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 120px;
+	height: 75px;
+	text-decoration: none;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-size: 16px;
+	justify-content: center;	
+	bottom: 3vh;
+	left: 2vw;
+	
+	
+}
+
+
+h2  {
+    
+    font-family: 'Spectral SC', serif;   
+	font-stretch: ultra-expanded;	
+    
+}
+
+.far fa-edit	
+{
+	font-size: 40px;
+}
+
+#delacc
+{
+	
+	position: absolute;
+	z-index: 10;
+	margin-top: 5px;
+	left: 10px;
+	color: #F5FFFA;
+}
+
+.d_user
+{
+	position: absolute;
+	z-index: 10;
+	margin-top: 5px;
+	left: 10px;
+	color: #F5FFFA;	
+}
+
+ /* EDIT POP UP WINDOW CSS*/
+ 
+ @keyframes fade
+ {
+	 from {opacity:0;}
+	 to {opacity: 1;}
+ }
+ 
+ #editprojbox
+{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	height: 800px;
+	font-family: 'Spectral SC', serif;
+	font-size: 22px;
+	font-weight: 400;
+	font-stretch: ultra-expanded;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 5px 30px rgba(0,0,0,.30);
+	visibility: visible;
+	border-radius: 5px;
+	opacity: 1;
+	right: 17vw;
+	top: 50vh;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+#upd
+{
+	
+	width: 320px;
+	height:65px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;
+	
+}
+
+
+
+ a  {
+    
+    text-decoration: none;
+    font-weight: bold;
+	color: black;
+	text-align: center;
+	
+}
+
+@media screen and (min-width: 2000px){
+	
+	#tableheader
+
+{	
+	font-weight:bolder;
+	font-size: 28px;
+	width: 1400px;
+	font-family: 'Spectral SC', serif;
+	line-height: 250%;
+	box-sizing: border-box;
+}
+	
+	
+}
+
+@media screen and (max-width: 1700px){
+	
+		.newproj {	
+	
+	width: 220px;
+	height:100px;
+	position: fixed;
+	top: 85vh;
+	left: 2vw;
+	}
+	
+		#allprojects
+{	
+
+width: 1300px; 
+}
+
+/*TABLES*/
+
+
+#tableheader
+{	
+	font-weight:bolder;
+	font-size: 28px;
+	width: 1300px;
+	font-family: 'Spectral SC', serif;
+	line-height: 250%;
+	box-sizing: border-box;
+}
+		
+	.projectrow 
+{
+	width: 25%;
+	font-weight:bolder;
+	text-align: left;
+	font-size
+}
+
+	td:nth-child(1) {
+
+font-size: 26px;
+font-weight: 200;
+line-height: 250%;
+width: 25%;
+}
+
+.description
+{
+	
+	padding-right: 30px;
+	width: 30%;
+
+}
+
+.status 
+{
+	width: 25%;
+	font-weight:bolder;
+	padding-left: 40px;
+
+}
+
+
+#alltasks
+{
+	font-size: 24px;
+	width: 10%;
+	line-height:200%;
+	padding-left: 5px;
+}
+
+#remtasks
+{
+	font-size: 24px;
+	width: 5%;
+	line-height:200%;
+	padding-right: 10px;
+
+}
+
+th #write, #delete
+{
+		width: 10%;
+}
+
+	
+	td:nth-child(1) {
+
+font-size: 26px;
+font-weight: 200;
+line-height: 250%;
+width: 25%;
+}	
+
+/*END OF TABLES*/
+
+
+	.newproj {	
+	
+	width: 180px;
+	height:90px;
+	position: fixed;
+	top: 85vh;
+	left: 2vw;
+	font-size: 14px;
+	}
+
+
+ #editprojbox
+{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	height: 800px;
+	font-family: 'Spectral SC', serif;
+	font-size: 22px;
+	font-weight: 400;
+	font-stretch: ultra-expanded;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 5px 30px rgba(0,0,0,.30);
+	visibility: visible;
+	border-radius: 5px;
+	opacity: 1;
+	right: 17vw;
+	top: 50vh;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+#upd
+{
+	
+	width: 320px;
+	height:65px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;
+	
+}
+
+
+
+}
+
+@media screen and (max-width: 1600px) {
+	
+	#allprojects
+{	
+
+width: 1200px; 
+}
+
+/*TABLES*/
+
+
+#tableheader
+{	
+	font-weight:bolder;
+	font-size: 28px;
+	width: 1200px;
+	font-family: 'Spectral SC', serif;
+	line-height: 250%;
+	box-sizing: border-box;
+}
+		
+	.projectrow 
+{
+	width: 25%;
+	font-weight:bolder;
+	text-align: left;
+	font-size
+}
+
+	td:nth-child(1) {
+
+font-size: 26px;
+font-weight: 200;
+line-height: 250%;
+width: 25%;
+}
+
+.description
+{
+	
+	padding-right: 30px;
+	width: 30%;
+
+}
+
+.status 
+{
+	width: 25%;
+	font-weight:bolder;
+	padding-left: 40px;
+
+}
+
+
+#alltasks
+{
+	font-size: 24px;
+	width: 10%;
+	line-height:200%;
+	padding-left: 5px;
+}
+
+#remtasks
+{
+	font-size: 24px;
+	width: 5%;
+	line-height:200%;
+	padding-right: 10px;
+
+}
+
+th #write, #delete
+{
+		width: 10%;
+}
+
+	
+	td:nth-child(1) {
+
+font-size: 26px;
+font-weight: 200;
+line-height: 250%;
+width: 25%;
+}
+
+td
+{
+	font-size: 14px;
+}	
+
+/*END OF TABLES*/
+
+
+
+#allprojects h1
+{
+	font-size: 36px;
+}
+
+
+		
+
+
+#theuser	{
+	
+	height: 100px;
+	width: 200px;
+	left: 25px;
+	top: 50px;			
+}
+
+#theuser:before	{
+	
+
+	height: 100px;
+	width: 200px;
+			
+}
+
+ .username	{
+	
+	margin-bottom: 6px;
+	color: white;	
+	position: relative;
+	left: 10px;
+
+
+	}
+	
+	#loginmessage	{
+		
+		left: 30px;
+		color: white;
+		position: relative;
+		margin-top: 1px;
+		margin-bottom: 6px;
+		font-size: 12px;
+				
+	}
+
+.logout   {    
+
+    font-size: 18px;
+	position: relative;
+	float: right;
+	right: 10px;
+	
+}
+
+.searchbox {
+    
+    display: inline-flex;
+    position: fixed;
+    right: 1%;
+    top: 5vh;    
+}
+
+.searchbox input   {
+    
+    height: 32px;  
+	width: 225px;	
+    border-radius: 4px;
+    font-size: 16px;
+        
+}
+
+.searchbox h2 {
+	
+	  display: inline;
+    position: relative;
+    top: 30%;  
+	
+}
+
+
+
+/* NEW PROJECT */
+
+
+	
+
+
+#projname label
+{
+
+	
+}
+
+#projdes label
+{
+
+	width: 60%;
+	
+
+}
+
+#newprojbox
+{
+	width: 550px;
+	height: 650px;
+	font-size: 19px;
+	right: 17vw;
+	top: 50vh;		
+}
+
+#editprojbox
+{
+	width: 550px;
+	height: 650px;
+	font-size: 19px;
+	right: 15vw;
+	top: 50vh;		
+}
+
+#newprojbox h2
+{
+	font-size: 22px;
+}
+
+#projdes textarea
+{
+
+	width: 80%;
+	height: 300px;
+	font-size: 19px;
+}
+
+input	
+{
+	width:75%;
+
+}
+
+#init
+{
+	
+	width: 260px;
+	height:50px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;
+	
+}
+
+.back2work {
+	
+	position: absolute;
+	width: 120px;
+	height:65px;
+	text-decoration: none;
+	right: 8.75vw;
+	bottom: 3vh;
+		
+}
+
+
+
+}
+
+@media screen and (max-width: 1450px) {
+	
+	#allprojects
+{	
+
+width: 1000px; 
+}
+	
+	.newproj {	
+	
+	width: 180px;
+	height:90px;
+	position: fixed;
+	top: 85vh;
+	left: 2vw;
+	font-size: 14px;
+	}
+	
+	td:nth-child(1) {
+
+font-family: 'Zilla Slab Highlight', cursive;
+font-size: 24px;
+font-weight: 200;
+line-height: 250%;
+text-align: left;
+width: 25%;
+font-stretch: expanded;
+color: #1a1110;
+}
+
+#allprojects h1
+{
+	font-size: 36px;
+}
+
+.theder {
+	
+	
+		font-weight:bolder;
+		font-size: 24px;
+		line-height: 200%;
+		}
+		
+.description
+{	
+	width: 30%;
+	font-size: 23px;
+}
+
+td:nth-child(2)
+
+{
+	font-size: 14px;
+}
+
+.projectrow
+{
+	width: 40%;
+}
+
+#alltasks
+{
+	width: 25%;
+}
+		
+td
+{
+	font-size: 14px;
+}
+
+#theuser	{
+	
+	height: 100px;
+	width: 200px;
+	left: 25px;
+	top: 50px;			
+}
+
+#theuser:before	{
+	
+
+	height: 100px;
+	width: 200px;
+			
+}
+
+ .username	{
+	
+	margin-bottom: 6px;
+	color: white;	
+	position: relative;
+	left: 10px;
+	}
+	
+	#loginmessage	{
+		
+		left: 30px;
+		color: white;
+		position: relative;
+		margin-top: 1px;
+		margin-bottom: 6px;
+		font-size: 12px;
+				
+	}
+
+.logout   {    
+
+    font-size: 18px;
+	position: relative;
+	float: right;
+	right: 10px;
+	
+}
+
+.searchbox {
+    
+    display: inline-flex;
+	flex-direction: column;
+    position: fixed;
+    right: 1%;
+    top: 5vh;    
+}
+
+.searchbox input   {
+    
+    height: 32px;  
+	width: 225px;	
+    border-radius: 4px;
+    font-size: 16px;
+        
+}
+
+.searchbox h2 {
+	
+	  display: inline;
+    position: relative;
+    top: 30%;  
+	
+}
+
+
+
+/* NEW PROJECT */
+
+
+#projdes label
+{	width: 60%;
+	
+}
+
+#newprojbox
+{
+	width: 550px;
+	height: 650px;
+	font-size: 19px;
+	right: 17vw;
+	top: 50vh;		
+}
+
+#editprojbox
+{
+	width: 550px;
+	height: 650px;
+	font-size: 19px;
+	right: 17vw;
+	top: 50vh;		
+}
+
+#newprojbox h2
+{
+	font-size: 22px;
+}
+
+#projdes textarea
+{
+
+	width: 80%;
+	height: 300px;
+	font-size: 19px;
+}
+
+input	
+{
+	width:75%;
+
+}
+
+#init
+{
+	
+	width: 260px;
+	height:50px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;
+	
+}
+
+#upd
+{
+	
+	width: 5px;
+	height:30px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;
+	
+}
+
+.back2work {
+	
+	position: absolute;
+	width: 120px;
+	height:60px;
+	text-decoration: none;
+	right: 8.75vw;
+	bottom: 3vh;
+		
+}	
+	
+
+}
+
+@media screen and (max-width: 1300px) {
+
+.newproj {
+	
+	top: 31vh;
+	width: 160px;
+	height:80px;
+	font-size: 12px;
+
+		
+}
+
+}
+
+@media screen and (max-width: 1000px) {
+	
+td:nth-child(1) {
+
+font-family: 'Zilla Slab Highlight', cursive;
+font-size: 22px;
+font-weight: boldest;
+line-height: 150%;
+text-align: left;
+
+}
+	
+	#allprojects
+{	
+width: 600px; 
+}
+
+#allprojects h1
+{
+	font-size: 20px;
+}
+
+.theder {
+	
+	
+		font-weight:bolder;
+		font-size: 18px;
+		line-height: 150%;
+		}
+		
+.description
+{	
+	width: 30%;
+	font-size: 16px;
+}
+
+.projectrow
+{
+	width: 25%;
+}
+
+#alltasks
+{
+	width: 25%;
+}
+		
+td
+{
+	font-size: 12px;
+}
+
+#theuser	{
+	
+	height: 80px;
+	width: 180px;
+	left: 25px;
+	top: 50px;			
+}
+
+#theuser:before	{
+	
+
+	height: 80px;
+	width: 180px;
+			
+}
+
+ .username	{
+	
+	margin-bottom: 4px;
+	color: white;	
+	position: relative;
+	left: 10px;
+	
+	}
+	
+	#loginmessage	{
+		
+		left: 30px;
+		color: white;
+		position: relative;
+		font-size: 10px;
+		margin-bottom: 4px;
+				
+	}
+
+.logout   {    
+
+    font-size: 14px;
+	position: relative;
+	float: right;
+	right: 10px;
+	
+}
+
+#delacc
+{
+	
+	position: absolute;
+	z-index: 10;
+	margin-top: 0px;
+	left: 10px;
+	color: #F5FFFA;
+}
+
+.d_user
+{
+	position: absolute;
+	z-index: 10;
+	margin-top: 0px;
+
+	
+}
+
+.searchbox {
+    
+    display: inline-flex;
+	flex-direction: column;
+    position: relative;
+    left: 75%;
+    top: 5vh;    
+}
+
+.searchbox input   {
+    
+    height: 32px;  
+	width: 180px;	
+    border-radius: 4px;
+    font-size: 16px;
+        
+}
+
+.searchbox h2 {
+	
+	display: inline;
+    position: relative;
+    top: 30%;  
+	font-size: 18px;
+	
+}
+
+.newproj {
+	
+	top: 34vh;
+	width: 140px;
+	height:80px;
+	font-size: 12px;
+}
+
+
+
+/* NEW PROJECT */	
+
+
+#projname label
+{
+
+	
+}
+
+#projdes label
+{
+
+	width: 60%;
+	
+
+}
+
+#newprojbox
+{
+	width: 550px;
+	height: 650px;
+	font-size: 19px;
+	right: 17vw;
+	top: 50vh;		
+}
+
+#newprojbox h2
+{
+	font-size: 22px;
+}
+
+#projdes textarea
+{
+
+	width: 80%;
+	height: 300px;
+	font-size: 19px;
+}
+
+input	
+{
+	width:75%;
+
+}
+
+#init
+{
+	
+	width: 260px;
+	height:50px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;
+	
+}
+
+.back2work {
+	
+	position: absolute;
+	width: 130px;
+	height:40px;
+	text-decoration: none;
+	right: 8.75vw;
+	bottom: 3vh;
+		
+}
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+	
+td:nth-child(1) {
+
+font-family: 'Zilla Slab Highlight', cursive;
+font-size: 22px;
+font-weight: boldest;
+line-height: 150%;
+text-align: left;
+
+}
+	
+	
+	table
+	{
+		width: auto; 
+	}
+	
+	#allprojects
+{	
+top: 6vh;
+width: 450px; 
+height: 50%;
+left: -5vw;
+}
+
+#allprojects h1
+{
+	font-size: 20px;
+}
+
+.theder {
+	
+	
+		font-weight:bolder;
+		font-size: 18px;
+		line-height: 150%;
+		}
+		
+.description
+{	
+	width: 30%;
+	font-size: 16px;
+}
+
+.projectrow
+{
+	width: 25%;
+}
+
+#alltasks
+{
+	width: 25%;
+}
+		
+td
+{
+	font-size: 12px;
+}
+
+#theuser	{
+	
+	position: relative;
+	height: 80px;
+	width: 180px;
+	left: 25px;
+	top: 50px;			
+}
+
+#theuser:before	{
+	
+	height: 80px;
+	width: 180px;
+			
+}
+
+ .username	{
+	
+	margin-bottom: 1px;
+	color: white;	
+	position: relative;
+	left: 10px;
+	font-size: 12px;
+
+	}
+	
+	#loginmessage	{
+		
+		left: 30px;
+		color: white;
+		position: relative;
+		margin-top: 1px;
+		margin-bottom: 6px;
+		font-size: 10px;
+				
+	}
+
+.logout   {    
+
+    font-size: 14px;
+	position: relative;
+	float: right;
+	right: 10px;
+	
+}
+
+.searchbox {
+    
+    display: inline-flex;
+	flex-direction: column;
+    position: relative;
+    left: 25%;
+    top: 2vh;    
+}
+
+.searchbox input   {
+    
+    height: 32px;  
+	width: 180px;	
+    border-radius: 4px;
+    font-size: 16px;
+        
+}
+
+.searchbox h2 {
+	
+	display: inline;
+    position: relative;
+    top: 30%;  
+	font-size: 18px;
+	
+}
+
+.newproj {
+	
+	right: 25vw;
+	top: 70vh;
+	width: 140px;
+	height:80px;
+	font-size: 8px;
+	position: absolute;
+}
+
+
+
+/* NEW PROJECT */	
+
+
+#projname label
+{
+
+	
+}
+
+#projdes label
+{
+
+	width: 60%;
+	
+
+}
+
+#newprojbox
+{
+	width: 550px;
+	height: 650px;
+	font-size: 19px;
+	right: 17vw;
+	top: 50vh;		
+}
+
+#newprojbox h2
+{
+	font-size: 22px;
+}
+
+#projdes textarea
+{
+
+	width: 80%;
+	height: 300px;
+	font-size: 19px;
+}
+
+input	
+{
+	width:75%;
+
+}
+
+#init
+{
+	
+	width: 260px;
+	height:50px;
+	background-color: #F5FFFA;
+	outline: none;
+	border: 2px solid black;
+	font-family: 'Spectral SC', serif;
+	font-size: 32px;
+	margin-top: -10px;
+	position: absolute;
+	right: 2vw;
+	bottom: 3vh;
+	
+}
+
+.back2work {
+	
+	position: absolute;
+	width: 130px;
+	height:40px;
+	text-decoration: none;
+	right: 8.75vw;
+	bottom: 3vh;
+		
+}
+
+
+
+
+
+}
+
+
